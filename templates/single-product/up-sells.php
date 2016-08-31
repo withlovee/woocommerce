@@ -27,7 +27,7 @@ if ( ! $upsells = $product->get_upsells() ) {
 }
 
 $args = array(
-	'post_type'           => 'product',
+	'post_type'           => array( 'product', 'product_variation' ),
 	'ignore_sticky_posts' => 1,
 	'no_found_rows'       => 1,
 	'posts_per_page'      => $posts_per_page,
