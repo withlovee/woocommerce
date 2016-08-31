@@ -477,7 +477,7 @@ class WC_Meta_Box_Product_Data {
 
 					<p class="form-field">
 						<label for="upsell_ids"><?php _e( 'Up-sells', 'woocommerce' ); ?></label>
-						<input type="hidden" class="wc-product-search" style="width: 50%;" id="upsell_ids" name="upsell_ids" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products" data-multiple="true" data-exclude="<?php echo intval( $post->ID ); ?>" data-selected="<?php
+						<input type="hidden" class="wc-product-search" style="width: 50%;" id="upsell_ids" name="upsell_ids" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products_and_variations" data-multiple="true" data-exclude="<?php echo intval( $post->ID ); ?>" data-selected="<?php
 							$product_ids = array_filter( array_map( 'absint', (array) get_post_meta( $post->ID, '_upsell_ids', true ) ) );
 							$json_ids    = array();
 
@@ -494,7 +494,7 @@ class WC_Meta_Box_Product_Data {
 
 					<p class="form-field">
 						<label for="crosssell_ids"><?php _e( 'Cross-sells', 'woocommerce' ); ?></label>
-						<input type="hidden" class="wc-product-search" style="width: 50%;" id="crosssell_ids" name="crosssell_ids" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products" data-multiple="true" data-exclude="<?php echo intval( $post->ID ); ?>" data-selected="<?php
+						<input type="hidden" class="wc-product-search" style="width: 50%;" id="crosssell_ids" name="crosssell_ids" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products_and_variations" data-multiple="true" data-exclude="<?php echo intval( $post->ID ); ?>" data-selected="<?php
 							$product_ids = array_filter( array_map( 'absint', (array) get_post_meta( $post->ID, '_crosssell_ids', true ) ) );
 							$json_ids    = array();
 
