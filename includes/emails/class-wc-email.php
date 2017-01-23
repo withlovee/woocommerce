@@ -249,7 +249,7 @@ class WC_Email extends WC_Settings_API {
 	 * @return string
 	 */
 	public function get_subject() {
-		return apply_filters( 'woocommerce_email_subject_' . $this->id, $this->format_string( $this->subject ), $this->object );
+		return apply_filters( 'woocommerce_email_subject_' . $this->id, $this->format_string( __($this->subject, 'woocommerce') ), $this->object );
 	}
 
 	/**
@@ -258,7 +258,7 @@ class WC_Email extends WC_Settings_API {
 	 * @return string
 	 */
 	public function get_heading() {
-		return apply_filters( 'woocommerce_email_heading_' . $this->id, $this->format_string( $this->heading ), $this->object );
+		return apply_filters( 'woocommerce_email_heading_' . $this->id, $this->format_string( __($this->heading, 'woocommerce') ), $this->object );
 	}
 
 	/**
